@@ -6,7 +6,7 @@ $('.message a').click(function() {
 });
 $('#login').click(function() {
     $.ajax({
-        url: 'http://localhost:5000/loginUser',
+        url: 'https://localhost:5000/loginUser',
         data: $('.login-form').serialize(),
         crossDomain: true,
         type: 'POST',
@@ -15,7 +15,7 @@ $('#login').click(function() {
         	console.log(response)
             if (JSON.parse(response)["status"] == "success") {
             	$("html").empty();
-            	window.location.href = 'http://localhost/chaupal/content.html'
+            	window.location.href = 'https://localhost/chaupal/content.html'
             }
         },
         error: function(error) {
@@ -29,7 +29,7 @@ $('#submit').click(function() {
 	data["articleTitle"] = $('#articleTitle').val()
 	data["article"] = $('#articleContent_ifr').contents().find('#tinymce').html()
     $.ajax({
-        url: 'http://localhost:5000/submitArticle',
+        url: 'https://localhost:5000/submitArticle',
         data: data,
         crossDomain: true,
         type: 'POST',
