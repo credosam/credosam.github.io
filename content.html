@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Flat HTML5/CSS3 Login Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="tinymce/js/tinymce/tinymce.js"></script>
+  <script>tinymce.init({ selector:'textarea',height: 500,
+  theme: 'modern',plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools  contextmenu colorpicker textpattern help',toolbar: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+  content_css: [
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]});</script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="content-page">
+        <div class="form">
+          <form class="login-form">
+            <input id = "writerName" name="writername" type="text" placeholder="Writer's Name"/>
+            <input id = "articleTitle" name="articletitle" type="text" placeholder="Article Title"/>
+            <textarea cols="80" rows="10" id="articleContent" name="articleContent">
+            </textarea>
+            <script type="text/javascript">
+            tinymce.init({ selector:'textarea' });
+            </script>
+            <button id = "submit" >submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script  src="js/index.js"></script>
+  </body>
+</html>
